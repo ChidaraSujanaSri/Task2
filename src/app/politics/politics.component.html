@@ -1,0 +1,23 @@
+<p>politics works!</p>
+<div *ngFor="let n of allNews" class="politics">
+    <table>
+        <tr>
+            <h2>{{n.headline}} </h2>
+        </tr>
+        <tr>
+            <td> <img src="/assets/images/{{n.image}}" alt="News image" width="120px" height="150px"> </td>
+        </tr>
+        <tr>
+            <td> 
+                <h3>{{n.category}}</h3>
+                <p> {{n.mainNews|fullNews}} </p>
+
+                <br/>
+                <button value="{{n.category}}" (click)="ReadFA(news.value)" #news> Read Full Article</button>
+
+
+            </td>
+
+        </tr>
+    </table>
+</div>
